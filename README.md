@@ -19,9 +19,8 @@ crontab -e
 2 * * * * {가상환경 내 파이썬 경로} {프로젝트 폴더 경로}/WebCrawling/url_FutureCar.py
 6. 저장소 초기화. latest_URL_FutureCar.txt, latest_URL_Mobility.txt 내부 내용 삭제
 7. cd 프로젝트명
-8. 
-python url_FutureCar.py
-python url_Mobility.py
+8. python url_FutureCar.py
+9. python url_Mobility.py
 
 ##주의사항
 인텔 맥에서의 환경임.
