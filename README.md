@@ -1,4 +1,3 @@
-'''markdown
 #Automated AjouUniv Notice Alert
 
 아주대학교 미래모빌리티공학과 공지사항, 아주대학교 미래자동차 혁신융합단 공지사항에서 새 글을 읽어 메일로 자동 전송
@@ -25,11 +24,11 @@ python url_FutureCar.py
 python url_Mobility.py
 
 ##주의사항
--인텔 맥에서의 환경임.
--크론탭 자동 실행시간에 네트워크 연결 필요
--python url_FutureCar.py, python url_Mobility.py의 from_email, to_email, password에 본인 정보 입력 필요
--테스트시 저장소 초기화 필요
--반드시 가상환경 진입 후 실행
+인텔 맥에서의 환경임.
+크론탭 자동 실행시간에 네트워크 연결 필요
+python url_FutureCar.py, python url_Mobility.py의 from_email, to_email, password에 본인 정보 입력 필요
+테스트시 저장소 초기화 필요
+반드시 가상환경 진입 후 실행
 
 ##개발목적
 아주대학교 공지사항들을 같은 과 학생들에게 자동으로 전송해 학교생활의 편의성 개선
