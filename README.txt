@@ -7,7 +7,7 @@
 
 
 주의 사항
-- crontab으로 3시간마다 url.py실행. vscode는 종료해도 되나 로컬 컴퓨터가 꺼진경우 실행 불가
+- crontab으로 X시 00분마다 url.py실행. vscode는 종료해도 되나 로컬 컴퓨터가 꺼진경우 실행 불가
 - crontab 명령어 설명:
 crontab -e => 크롬탭 편집기 실행
 crontab -l => 크롬탭 리스트 확인

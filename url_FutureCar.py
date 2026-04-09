@@ -22,28 +22,32 @@ def send_email(subject, body, to_email):
 
 # 2. 웹 크롤링 함수 (리스트를 사용하여 순서 유지)
 def fetch_all_posts():
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-    base_url = "https://mobility.ajou.ac.kr/mobility/board/notice.do"
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    
+    base_url = "https://future-car.ajou.ac.kr/bbs/board.php?bo_table=04_01"
     
     res = requests.get(base_url, headers=headers)
     soup = BeautifulSoup(res.text, "html.parser")
     
-    current_urls = [] # 순서 유지를 위해 리스트 사용
-    
-    for a in soup.select("a[href*='articleNo=']"):
+    current_urls = []
+
+    # 게시글 링크 찾기 (wr_id 포함)
+    for a in soup.select("a[href*='wr_id=']"):
         href = a.get("href")
-        if "mode=view" not in href:
+
+        if not href:
             continue
-        full_url = urljoin(base_url, href)
-        
-        # 중복 링크가 리스트에 들어가는 것 방지 (순서는 유지)
+
+        full_url = urljoin("https://future-car.ajou.ac.kr/", href)
+
+        # 중복 방지
         if full_url not in current_urls:
             current_urls.append(full_url)
-        
+
     return current_urls
 
 # 3. 메인 로직
-file_name = "/Users/imhojin/Documents/code/WebCrawling/latest_URL.txt"
+file_name = "/Users/imhojin/Documents/code/WebCrawling/latest_URL_FutureCar.txt"
 
 # 기존에 저장된 URL 불러오기 (순서 상관없이 비교용으로 set 변환)
 if os.path.exists(file_name):
@@ -71,7 +75,7 @@ if new_posts:
     
     try:
         send_email(
-            subject=f"Ajou Mobility 새 공지 알림 ({len(new_posts)}건)",
+            subject=f"Ajou Future Car 새 공지 알림 ({len(new_posts)}건)",
             body=email_body,
             to_email="hoim03@ajou.ac.kr"
         )

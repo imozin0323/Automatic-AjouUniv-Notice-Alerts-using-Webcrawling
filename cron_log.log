@@ -3393,3 +3393,21 @@ Traceback (most recent call last):
   File "/Users/imhojin/Documents/code/WebCrawling/requests/lib/python3.11/site-packages/requests/adapters.py", line 677, in send
     raise ConnectionError(e, request=request)
 requests.exceptions.ConnectionError: HTTPSConnectionPool(host='mobility.ajou.ac.kr', port=443): Max retries exceeded with url: /mobility/board/notice.do (Caused by NameResolutionError("HTTPSConnection(host='mobility.ajou.ac.kr', port=443): Failed to resolve 'mobility.ajou.ac.kr' ([Errno 8] nodename nor servname provided, or not known)"))
+새로운 공지사항이 없습니다.
+새로운 공지사항이 없습니다.
+새로운 공지사항이 없습니다.
+새로운 공지사항이 없습니다.
+새로운 공지사항이 없습니다.
+새로운 공지사항이 없습니다.
+새로운 공지사항이 없습니다.
+새로운 공지사항이 없습니다.
+새로운 공지사항이 없습니다.
+새로운 공지사항이 없습니다.
+새로운 공지사항이 없습니다.
+새로운 공지사항이 없습니다.
+새로운 공지사항이 없습니다.
+새로운 공지사항이 없습니다.
+새로운 공지사항이 없습니다.
+새로운 공지사항이 없습니다.
+새로운 공지사항이 없습니다.
+새로운 공지사항이 없습니다.
