@@ -3,18 +3,19 @@
 
 파일명
 - requests : 파이썬 가상환경 폴더
-- latest_URL.txt : 공지글, 일반글의 마지막 URL 저장 텍스트파일
-- url.py : 아주대 미래모빌리티 공지사항 웹크롤링, 새 글인지 확인, 메일 전송
-
+- latest_URL_Mobility.txt : 미래모빌리티공학과 공지글, 일반글의 마지막 URL 저장 텍스트파일
+- latest_URL_FutureCar.txt : 미래자동차 혁신융합단 공지글, 일반글의 마지막 URL 저장 텍스트파일
+- url_Mobility.py : 아주대 미래모빌리티 공지사항 웹크롤링, 새 글인지 확인, 메일 전송
+- url_FutureCar.py : 아주대 미래자동차 혁신융합단 공지사항 웹크롤링, 새 글인지 확인, 메일 전송
 
 주의 사항
-- crontab으로 X시 00분마다 url.py실행. vscode는 종료해도 되나 로컬 컴퓨터가 꺼진경우 실행 불가
+- crontab으로 X시 00분마다 url_Mobility.py실행, x시 02분마다 url_FutureCar.py 실행. vscode는 종료해도 되나 로컬 컴퓨터가 꺼진경우 실행 불가
 - crontab 명령어 설명:
 crontab -e => 크롬탭 편집기 실행
 crontab -l => 크롬탭 리스트 확인
-* */3 * * * => 모든 분 3시간마다 모든 날 모든 월 모든 년 에 실행. 
+example) * */3 * * * => 모든 분 3시간마다 모든 날 모든 월 모든 년 에 실행. 
 ~~bin/python3 => 가상환경내 파이썬 경로. (which python3 로 확인)
-~~url.py => 파이썬 스크립트 절대경로
+~~url_xxxxx.py => 파이썬 스크립트 절대경로
 
 - 스크립트 실행 시간에 네트워크 접속 없으면 실행 실패
 - password는 gmail앱 비밀번호로, 계정 비밀번호와 다름
